@@ -1,19 +1,45 @@
-# Python
-*.pyc
+# Python bytecode and cache
 __pycache__/
+*.py[cod]
+*$py.class
 
-# Django
-*.sqlite3
-/db.sqlite3
-/staticfiles/
-/media/
-/.env
+# Virtual environment
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
 
-# VS Code
-.vscode/
-
-# MacOS
-.DS_Store
-
-# Logs
+# Django stuff
 *.log
+*.pot
+*.pyc
+db.sqlite3
+media/
+staticfiles/
+
+# If using Django collectstatic
+/static/
+/static_root/
+
+# Environment variables
+.env
+
+# VS Code and IDE settings
+.vscode/
+.idea/
+
+# Mac and Windows system files
+.DS_Store
+Thumbs.db
+
+# Pipenv/Poetry files
+Pipfile.lock
+poetry.lock
+
+# Coverage and testing
+htmlcov/
+.coverage
+.tox/
+pytest_cache/
