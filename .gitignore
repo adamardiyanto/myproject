@@ -20,7 +20,7 @@ media/
 staticfiles/
 
 # If using Django collectstatic
-/static/
+
 /static_root/
 
 # Environment variables
