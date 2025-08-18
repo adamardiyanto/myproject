@@ -1,10 +1,10 @@
 from django.test import TestCase
 from django.urls import reverse
 from django.urls import resolve
-from .views import signup
+from ..views import signup
 from django.contrib.auth.models import User
 
-from .forms import SignUpForm
+from ..forms import SignUpForm
 
 
 class SignUpTests(TestCase):
@@ -86,3 +86,10 @@ class InvalidSignUpTests(TestCase):
 
     def test_dont_create_user(self):
         self.assertFalse(User.objects.exists())
+
+class SignUpFormTest(TestCase):
+    def test_form_has_fields(self):
+        form = SignUpForm()
+        expected = ['username', 'email', 'password1', 'password2',]
+        actual = list(form.fields)
+        self.assertSequenceEqual(expected, actual)
